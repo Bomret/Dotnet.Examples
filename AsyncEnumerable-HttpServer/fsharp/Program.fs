@@ -9,7 +9,7 @@ module Program =
     let Message =
         ReadOnlyMemory(Encoding.UTF8.GetBytes("Hello World"))
 
-    let Do (cancellationToken: CancellationToken) =
+    let Do (cancellationToken: CancellationToken): Async<unit> =
         let options: HttpServer.Options =
             { Hostname = "localhost"
               Port = 8080us }
